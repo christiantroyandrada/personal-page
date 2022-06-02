@@ -12,131 +12,91 @@
     <meta name="author" content="Christian Troy Andrada" />
     <link rel="stylesheet" href="./css/app.css">
     <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
     <title>❦Christian's Personal Site❦</title>
   </head>
   
   <body>
-    <div>
-        <table cellspacing="20px">
-            <tr>
-                <td>
-                    <img src="./img/profile.png" alt="Profile Image" class="avatar-img"/>
-                </td>
-                <td>
-                    <h1>Christian Troy Andrada</h1>
-                    <p><em>Web Developer | IT Professional | Jack of all IT Trades | Coding and Learning for Life</em></p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/christiantroyandrada/" target="_blank"><strong>LinkedIn Profile</strong></a><br>
-                        <a href="mailto:christiantroyandrada@gmail.com" target="_blank"><strong>Reach out via email!</strong></a>
-                    </p>
-                    <p>
-                        With over 2 years of combined work experience in Web Development + IT Operations and Troubleshooting that has a knack for Coffee. 
-                    </p>
-                </td>
-            </tr>
-        </table>   
-    </div> 
-    <hr>
-    <div>
-        <h3>Education</h3>
-        <p>
-            <a href="https://www.pup.edu.ph/" target="_blank">
-                <strong>Polytechnic University of the Philippines</strong>
-            </a><br>
-            <em>Bachelor of Science - BS, Information Technology</em><br>
-            <em>2015 - 2019</em><br>
-            Studied in the university with the following major subjects in the curriculum:
-            <ul>
-                <li>C Programming</li>
-                <li>Java Programming and OOP Concepts</li>
-                <li>Flowcharting and programming with COBOL</li>
-                <li>Networking fundamentals and network setup using Cisco Packet Tracer.</li>
-                <li>Computer Hardware and creation of circuits on a Breadboard.</li>
-                <li>SQL and Relational Database Management.</li>
-                <li>Multimedia and usage of Adobe Photoshop and Flash.</li>
-                <li>Research Fundamentals and Project Management</li>
-                <li>Capstone Project (using Web Development for the solution)</li>
-            </ul>
-        </p>
+    <div class="intro">
+        <img class="cloud1" src="./img/cloud.png" alt="Cloud image">
+        <h1>I'm Christian!</h1>
+        <p><em>Web Developer | IT Professional | Jack of all IT Trades | Coding and Learning for Life</em></p>
+        <img class="cloud2" src="./img/cloud.png" alt="Cloud image">
+        <img style="position: relative; top:4px;" src="./img/mountain.png" alt="Mountain image">
+        <hr>
     </div>
-    <hr>
-    <div>
-        <h3>Work Experience</h3>
-        <table cellspacing="10">
-            <thead>
-                <th>Date Range</th>
-                <th>Organization</th>
-                <th>Employment Type</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dec 2018 - May 2019</td>
-                    <td>Aktus Global Management</td>
-                    <td>Internship</td>
-                </tr>
-                <tr>
-                    <td>Mar 2020 - Jan 2022</td>
-                    <td>Pylon International Trading Corporation</td>
-                    <td>Full-time</td>
-                </tr>
-                <tr>
-                    <td>Feb 2022 - Present</td>
-                    <td>Collabera Technologies Private Limited Inc.</td>
-                    <td>Full-time</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <div>
-        <h3>Skills</h3>
-        <table cellspacing="10">
-            <thead>
-                <tr>
-                    <th>Skill</th>
-                    <th>Proficiency (1-5)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>★★★★★</td>
-                </tr>
-                <tr>
-                    <td>Git</td>
-                    <td>★★★★</td>
-                </tr>
-                <tr>
-                    <td>PHP</td>
-                    <td>★★★</td>
-                </tr>
-                <tr>
-                    <td>Vue.js</td>
-                    <td>★★★★★</td>
-                </tr>
-                <tr>
-                    <td>Vuetify</td>
-                    <td>★★★★★</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>More skills shown on my <a href="https://www.linkedin.com/in/christiantroyandrada/details/skills/" target="_blank">LinkedIn</a> Profile</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <hr>
-    <div>
-        <h3>Quick Links</h3>
-        <ul>
-            <li>
-                <a href="./hobbies.html"><h5>My Hobbies</h5></a>
-            </li>
-            <li>
-                <a href="./contacts.html"><h5>Contacts</h5></a>  
-            </li>
-        </ul>  
-    </div> 
+
+    <div class="mid-container">
+        <div class="profile">   
+          <img class="avatar-img" src="./img/profile.png" alt="My image">
+          <h2>Hello.</h2>
+          <p>With over 2 years of combined work experience in Web Development + IT Operations and Troubleshooting. I desire to contribute to the IT community and grow with you guys. The community that works hard and plays hard.</p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class="avatar-img" src="./img/code.png" alt="Code image">
+            <h3>Coding</h3>
+            <p>If you have read the earlier portion of the page, you might've known this already.  I code especially on web development because I believe <strong>web is the present and the future</strong>.</p>
+          </div>
+          <div class="skill-row">
+            <table class="skill-table" cellspacing="10">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency (1-5)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>★★★★</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>★★★</td>
+                    </tr>
+                    <tr>
+                        <td>Vue.js</td>
+                        <td>★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td>Vuetify</td>
+                        <td>★★★★★</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+          </div>
+          <div class="skill-row">
+            <img class="avatar-img" src="./img/troubleshooting.png" alt="Troubleshooting image">
+            <h3>Troubleshooting</h3>
+            <p>My second skill, but the first skill that really got me into being an IT professional in the first place.  <strong>I've destroyed quite a number of pc back in my younger days just for me to know how to fix one.</strong>  Had some experience in internship that I still use until this day.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+          <h2>Get In Touch</h2>
+          <h3>If you want to grab a coffee or something.</h3>
+          <p>Teach me things you know while I teach you things I know, my treat most of the time but sometimes you treat me.</p>
+        </div>
+      </div>
+      
+      
+      <div class="bot-container">
+        <a class="btn" href="mailto:christiantroyandrada@gmail.com">CONTACT ME</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/christiantroyandrada/" target="_blank">LinkedIn</a>
+        <a class="footer-link" href="https://github.com/christiantroyandrada" target="_blank">GitHub</a>
+        <a class="footer-link" href="https://christiantroyandrada.github.io/personal-page/" target="_blank">Website</a>
+        <p style="color: lightgrey;">© Christian Andrada.</p>
+      </div>      
   </body>
 </html>

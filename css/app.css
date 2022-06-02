@@ -1,5 +1,9 @@
+/* Default styles for elements */
+
 body{
     background-color: #BBE1FA;
+    text-align: center;
+    margin: 0px;
 }
 hr{
     border-style: dashed none none;
@@ -7,23 +11,22 @@ hr{
     width: 3.5%;
     border-color: #0F4C75;
 }
-.avatar-img{
-    border-radius: 50%;
-    border-style: solid;  
-    border-width: 0.5px;
-    max-width: 200px; 
-}
-h1,h3,th{
+
+h1{
     color: #0F4C75;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dancing Script', cursive;
+}
+h2,h3,th{
+    color: #0F4C75;
+    font-family: 'Comfortaa', cursive;
 }
 p,td,li{
     color:#1B262C;
-    font-family: Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 a{
     color: #0F4C75;
-    font-family: Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -34,4 +37,67 @@ a:hover,a:focus{
 a:visited{
     color: #000;
     text-decoration: underline;
+}
+
+/* Classes */
+.avatar-img{
+    margin-top: 10px; /*Some images are provided by flaticons.com*/
+    max-width: 200px; 
+}
+
+.intro{
+    padding-top: 9rem;
+    position: relative;
+}
+.intro h1{
+    margin: 0, auto;
+}
+.intro hr{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #653614;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom:0; 
+}
+.cloud1{
+   position: absolute;
+   right: 380px;
+   top: 100px;     
+}
+.cloud2{
+    position: absolute;
+    bottom: 320px;
+    left: 380px;
+}
+
+.mid-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skill-table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.bot-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    background-color: #0F4C75;
+}
+.btn{
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    color: #fff;
+
+}
+.footer-link{
+    display: inline;
+    color: #fff;
+    margin: auto;
 }
