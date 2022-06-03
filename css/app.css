@@ -14,9 +14,16 @@ hr{
 
 h1{
     color: #0F4C75;
+    font-size: 5em;
     font-family: 'Dancing Script', cursive;
 }
-h2,h3,th{
+h2{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #0F4C75;
+}
+h3,th{
     color: #0F4C75;
     font-family: 'Comfortaa', cursive;
 }
@@ -30,7 +37,7 @@ a{
     font-weight: bold;
     text-decoration: none;
 }
-a:hover,a:focus{
+a:hover a:focus{
     color: #000;
     text-decoration: underline;
 }
@@ -50,7 +57,9 @@ a:visited{
     position: relative;
 }
 .intro h1{
-    margin: 0, auto;
+    margin: 0;
+    padding-top: 0.125rem;
+    line-height: 2;
 }
 .intro hr{
     border-style: solid;
@@ -76,9 +85,34 @@ a:visited{
     margin-left: auto;
     margin-right: auto;
 }
+.profile{
+    width: 70%;
+    margin: 0 auto;
+}
+.skill-row{
+    width: 50%;
+    margin: 6.25rem auto;
+    text-align: left;
+    line-height: 2;
+}
+.skill-row img{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
 .skill-table{
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+.skill-row2{
+    width: 50%;
+    margin: 6.25rem auto;
+    text-align: left;
+    line-height: 2;
+}
+.skill-row2 img{
+    width: 25%;
+    float: right;
+    margin-left: 30px;
 }
 .bot-container{
     display: flex;
@@ -89,15 +123,40 @@ a:visited{
     top: 20px;
     background-color: #0F4C75;
 }
-.btn{
-    display: block;
-    text-decoration: underline;
-    margin-bottom: 1rem;
-    color: #fff;
 
+.btn {
+    display: inline-block;
+    background: #3282B8;
+    background-image: -webkit-linear-gradient(top, #3282B8, #0F4C75);
+    background-image: -moz-linear-gradient(top, #3282B8, #0F4C75);
+    background-image: -ms-linear-gradient(top, #3282B8, #0F4C75);
+    background-image: -o-linear-gradient(top, #3282B8, #0F4C75);
+    background-image: linear-gradient(to bottom, #3282B8, #0F4C75);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 1rem, auto;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #0F4C75;
+    background-image: -webkit-linear-gradient(top, #0F4C75, #1B262C);
+    background-image: -moz-linear-gradient(top, #0F4C75, #1B262C);
+    background-image: -ms-linear-gradient(top, #0F4C75, #1B262C);
+    background-image: -o-linear-gradient(top, #0F4C75, #1B262C);
+    background-image: linear-gradient(to bottom, #0F4C75, #1B262C);
+    text-decoration: none;
+  }
+.link-container{
+    margin: 0.5rem auto;
+    
 }
 .footer-link{
-    display: inline;
+    display: block;
     color: #fff;
-    margin: auto;
+    margin: 0.5rem auto;
 }
