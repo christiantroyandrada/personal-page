@@ -1,7 +1,7 @@
 
 import { ArrowDown } from 'lucide-react';
 
-const Hero = () => {
+const Hero:object = ({photo}) => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-50 relative">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-50 to-gray-100 z-0"></div>
@@ -10,10 +10,10 @@ const Hero = () => {
           <div className="md:col-span-7 space-y-6 text-center md:text-left">
             <p className="text-blue-500 font-medium">Hello, I'm</p>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              Your Name
+              Christian Troy Andrada
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-lg md:max-w-xl">
-              A passionate developer & designer creating digital experiences that people love
+              Web Developer | IT Professional | Jack of all IT Trades | Coding and Learning for Life
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
               <a href="#projects" className="btn-primary">
@@ -26,12 +26,19 @@ const Hero = () => {
           </div>
           <div className="md:col-span-5">
             <div className="bg-white p-2 rounded-full shadow-xl max-w-xs mx-auto md:max-w-none">
-              <div className="rounded-full overflow-hidden aspect-square bg-gray-200">
-                {/* Replace with your image */}
+            <div className="rounded-full overflow-hidden aspect-square bg-gray-200">
+              {photo?.photo_address ? (
+                <img
+                  src={photo.photo_address}
+                  alt="User Photo"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-400">
                   Your Photo
                 </div>
-              </div>
+              )}
+            </div>
             </div>
           </div>
         </div>
