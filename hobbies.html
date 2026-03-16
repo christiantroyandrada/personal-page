@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Anti-FOUC: apply saved theme before first paint -->
+    <script>try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.remove('dark-theme');}catch(e){}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Hobbies & Interests | Christian Troy Andrada</title>
-    <meta name="title" content="Hobbies & Interests | Christian Troy Andrada" />
+    <title>Hobbies &amp; Interests | Christian Troy Andrada - Web Developer</title>
     <meta name="description" content="Discover Christian Troy Andrada's hobbies and interests - from singing and playing musical instruments to gaming, coffee sessions, and exploring nature." />
     <meta name="keywords" content="Christian Troy Andrada, hobbies, interests, singing, musical instruments, gaming, coffee, nature, tech news" />
     <meta name="author" content="Christian Troy Andrada" />
@@ -19,123 +19,133 @@
     <meta property="og:url" content="https://ctaprojects.xyz/hobbies.html" />
     <meta property="og:title" content="Hobbies & Interests | Christian Troy Andrada" />
     <meta property="og:description" content="Discover Christian Troy Andrada's hobbies and interests - from singing and playing musical instruments to gaming and exploring nature." />
-    <meta property="og:image" content="https://ctaprojects.xyz/img/og-image.png" />
+    <meta property="og:image" content="https://ctaprojects.xyz/img/avatar.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Christian Troy Andrada Portfolio" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://ctaprojects.xyz/hobbies.html" />
     <meta name="twitter:title" content="Hobbies & Interests | Christian Troy Andrada" />
     <meta name="twitter:description" content="Discover Christian Troy Andrada's hobbies and interests - from singing and playing musical instruments to gaming and exploring nature." />
-    <meta name="twitter:image" content="https://ctaprojects.xyz/img/og-image.png" />
+    <meta name="twitter:image" content="https://ctaprojects.xyz/img/avatar.jpeg" />
     
     <!-- Additional SEO -->
-    <meta name="theme-color" content="#191919" />
-    
-    <link rel="stylesheet" href="./css/app.css">
-    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CTA Portfolio" />
+    <!-- Preconnect hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
+<body>
+    <!-- Skip Navigation -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Cover Image -->
-    <div class="cover-container" style="height: 120px;">
-      <div class="cover-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+    <div class="cover-container cover-container--subpage">
+      <div class="cover-image cover-image--hobbies"></div>
     </div>
 
     <!-- Main Content -->
-    <main class="main-container">
+    <main class="main-container" id="main-content">
       <!-- Back Link -->
-      <a href="./index.html" class="back-link" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; margin-bottom: 24px; font-weight: 500;">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+      <a href="./index.html" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
           <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
         </svg>
         Back to Home
       </a>
 
-      <h1 class="page-title" style="margin-bottom: 24px;">Hobbies & Interests</h1>
+      <h1 class="page-title">Hobbies &amp; Interests</h1>
       
       <p class="text-content" style="margin-bottom: 24px; color: var(--text-secondary);">
         When I'm not coding, here's what keeps me inspired and energized:
       </p>
 
-      <div class="hobbies-grid" style="display: grid; gap: 16px;">
+      <section class="content-section">
+        <h2 class="section-title">What Keeps Me Inspired</h2>
+        <div class="hobbies-grid">
         
-        <a href="https://en.wikipedia.org/wiki/Singing" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">🎤</span>
+        <a href="https://en.wikipedia.org/wiki/Singing" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">🎤</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Singing</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Expressing through music and vocals</p>
+            <h3>Singing</h3>
+            <p>Expressing through music and vocals</p>
           </div>
         </a>
 
-        <a href="https://en.wikipedia.org/wiki/Musical_instrument" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">🎸</span>
+        <a href="https://en.wikipedia.org/wiki/Musical_instrument" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">🎸</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Musical Instruments</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Playing and learning various instruments</p>
+            <h3>Musical Instruments</h3>
+            <p>Playing and learning various instruments</p>
           </div>
         </a>
 
-        <a href="https://en.wikipedia.org/wiki/Video_game" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">🎮</span>
+        <a href="https://en.wikipedia.org/wiki/Video_game" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">🎮</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Gaming</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Relaxing with video games</p>
+            <h3>Gaming</h3>
+            <p>Relaxing with video games</p>
           </div>
         </a>
 
-        <a href="https://www.google.com/maps/search/coffee+shops+pasay/@14.5925351,121.0285341,12z/data=!3m1!4b1" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">☕</span>
+        <a href="https://www.google.com/maps/search/coffee+shops+pasay/@14.5925351,121.0285341,12z/data=!3m1!4b1" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">☕</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Coffee Sessions</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Exploring local coffee shops and cafes</p>
+            <h3>Coffee Sessions</h3>
+            <p>Exploring local coffee shops and cafes</p>
           </div>
         </a>
 
-        <a href="https://en.wikipedia.org/wiki/Mount_Makiling" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">🏔️</span>
+        <a href="https://en.wikipedia.org/wiki/Mount_Makiling" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">🏔️</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Exploring Nature</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Hiking and outdoor adventures</p>
+            <h3>Exploring Nature</h3>
+            <p>Hiking and outdoor adventures</p>
           </div>
         </a>
 
-        <a href="https://www.youtube.com/c/Fireship" target="_blank" rel="noopener noreferrer" class="hobby-card" style="display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-          <span style="font-size: 2rem;">📺</span>
+        <a href="https://www.youtube.com/c/Fireship" target="_blank" rel="noopener noreferrer" class="hobby-card">
+          <span class="hobby-icon" aria-hidden="true">📺</span>
           <div>
-            <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Tech News via YouTube</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary);">Staying updated with the latest in tech</p>
+            <h3>Tech News via YouTube</h3>
+            <p>Staying updated with the latest in tech</p>
           </div>
         </a>
 
       </div>
+      </section>
 
       <hr class="divider" />
 
       <!-- Footer -->
       <footer class="footer">
-        <p>©2025 Christian Troy Andrada</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./index.html">Home</a>
+          <a href="./contacts.html">Contact</a>
+        </nav>
+        <p>&copy;2026 Christian Troy Andrada</p>
       </footer>
     </main>
 
     <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
         <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
       </svg>
-      <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
         <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
       </svg>
     </button>
-
-    <style>
-      .hobby-card:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--card-hover-shadow);
-      }
-    </style>
 
     <script defer src="./js/index.js"></script>
 </body>
