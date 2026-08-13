@@ -871,6 +871,31 @@ button:focus-visible,
   margin-left: 4px;
 }
 
+.project-image--confidential {
+  display: grid;
+  place-items: center;
+  background: var(--bg-tertiary);
+}
+
+.confidential-preview {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.confidential-preview__lock {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.confidential-preview__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 /* ============================================
    SUB-PAGE COVER MODIFIERS
    ============================================ */

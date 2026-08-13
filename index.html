@@ -299,17 +299,20 @@
             </div>
           </a>
           
-          <div id="ndaProjectCard" class="project-card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Internal Project 1 — click to learn more" style="cursor: pointer;">
-            <div class="project-image">
-              <img src="https://curly-hawk-f0d.notion.site/image/attachment%3A3b30bdb4-4bb9-425c-9b90-377a8a9b7ca6%3AScreenshot_2025-05-23_at_1.38.30_PM.png?table=block&id=1fc12890-8766-80c9-9b20-df919d6b6b70&spaceId=6de12890-8766-817a-a8d7-00039643e59f&width=2000&userId=&cache=v2" alt="Internal Project" loading="lazy" width="400" height="180" />
+          <div id="ndaProjectCard" class="project-card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Confidential client project, click to learn more" style="cursor: pointer;">
+            <div class="project-image project-image--confidential" aria-hidden="true">
+              <div class="confidential-preview">
+                <span class="confidential-preview__lock">🔒</span>
+                <span class="confidential-preview__label">Private client work</span>
+              </div>
             </div>
             <div class="project-info">
-              <h3>Internal Project 1 <span class="nda-badge">🔒 NDA</span></h3>
-              <p>Money tracker with D3.js charts, now ported to Svelte + SSR as required by client.</p>
-              <div class="project-tech-tags" aria-label="Tech stack">
-                <span class="project-tech-tag">Svelte</span>
-                <span class="project-tech-tag">D3.js</span>
-                <span class="project-tech-tag">SSR</span>
+              <h3>Confidential client project <span class="nda-badge">🔒 NDA</span></h3>
+              <p>Frontend product work delivered under a client confidentiality agreement.</p>
+              <div class="project-tech-tags" aria-label="Areas of work">
+                <span class="project-tech-tag">Frontend</span>
+                <span class="project-tech-tag">Data visualization</span>
+                <span class="project-tech-tag">Delivery</span>
               </div>
             </div>
           </div>
@@ -544,7 +547,7 @@
       <div class="modal-box">
         <div class="modal-emoji" aria-hidden="true">🔒</div>
         <h3 id="ndaModalTitle">Confidential Project</h3>
-        <p>This is an internal client project protected by a Non-Disclosure Agreement and cannot be shared publicly. I'm happy to discuss the architecture and challenges in a private conversation.</p>
+        <p>This client project is protected by a Non-Disclosure Agreement and cannot be shared publicly. I'm happy to discuss my role and general engineering approach without sharing protected details.</p>
         <button type="button" class="modal-close-btn" id="ndaModalClose">Got it</button>
       </div>
     </div>
