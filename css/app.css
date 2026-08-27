@@ -341,6 +341,11 @@ body.workbench-page {
   margin-top: var(--space-lg);
 }
 
+.tag-list {
+  padding: 0;
+  list-style: none;
+}
+
 .tag {
   border: 1px solid var(--color-rule);
   padding: 0.2rem 0.5rem;
