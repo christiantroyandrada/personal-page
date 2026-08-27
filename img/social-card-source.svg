@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#d8d0c2"/>
+  <g fill="none" stroke="#8d8375" stroke-width="1">
+    <path d="M72 72H1128V558H72Z"/>
+    <path d="M72 152H1128M72 478H1128M920 72V558"/>
+    <path d="M96 96h48m-24-24v48M1056 510h48m-24-24v48" opacity=".55"/>
+  </g>
+  <g fill="#a6553e">
+    <circle cx="96" cy="112" r="5"/><circle cx="1104" cy="518" r="5"/>
+    <rect x="920" y="72" width="208" height="8"/>
+  </g>
+  <g font-family="Arial Narrow, Arial, sans-serif" fill="#26342e">
+    <text x="96" y="126" font-size="22" font-weight="700" letter-spacing="3">CTA / SOFTWARE ENGINEER</text>
+    <text x="96" y="248" font-size="76" font-weight="700" letter-spacing="-2">CHRISTIAN TROY</text>
+    <text x="96" y="334" font-size="76" font-weight="700" letter-spacing="-2">ANDRADA</text>
+    <text x="96" y="414" font-size="30" letter-spacing="1">FULL-STACK SOFTWARE / BUILD + OPERATE</text>
+    <text x="96" y="526" font-size="23" letter-spacing="2">PRAGMATIC. RESOURCEFUL. ADAPTIVE.</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#5c655f" transform="rotate(90 1018 176)">
+    <text x="1018" y="176" letter-spacing="3">CTAPROJECTS.XYZ / PHILIPPINES</text>
+  </g>
+</svg>
