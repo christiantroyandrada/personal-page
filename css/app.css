@@ -387,6 +387,20 @@ body.workbench-page {
   font: inherit;
 }
 
+.honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--color-muted);
+}
+
 .contact-form textarea {
   min-height: 10rem;
   resize: vertical;
