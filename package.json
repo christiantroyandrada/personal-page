@@ -1,0 +1,14 @@
+{
+  "name": "christian-troy-andrada-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate:html": "html-validate index.html contacts.html hobbies.html",
+    "check": "npm run test && npm run validate:html"
+  },
+  "devDependencies": {
+    "html-validate": "11.10.0",
+    "lighthouse": "13.4.1"
+  }
+}
