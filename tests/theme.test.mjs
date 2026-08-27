@@ -6,6 +6,8 @@ import {
   getInitialTheme,
   safeReadTheme,
   safeWriteTheme,
+  initializeReveals,
+  initializeTheme,
 } from '../js/site.mjs';
 
 test('stored theme wins over the system preference', () => {
@@ -32,4 +34,36 @@ test('applyTheme updates theme and native colour scheme together', () => {
   applyTheme(root, 'dark');
   assert.equal(root.dataset.theme, 'dark');
   assert.equal(root.style.colorScheme, 'dark');
+});
+
+test('theme toggle updates the document, label, pressed state, and storage', () => {
+  let click;
+  const root = { dataset: { theme: 'light' }, style: {} };
+  const label = { textContent: '' };
+  const toggle = {
+    attributes: {},
+    setAttribute(name, value) { this.attributes[name] = value; },
+    addEventListener(type, handler) { if (type === 'click') click = handler; },
+    querySelector() { return label; },
+  };
+  const writes = [];
+  const storage = { getItem: () => null, setItem: (...args) => writes.push(args) };
+  const media = { matches: false, addEventListener() {} };
+
+  initializeTheme({ root, toggle, storage, media });
+  click();
+
+  assert.equal(root.dataset.theme, 'dark');
+  assert.equal(toggle.attributes['aria-pressed'], 'true');
+  assert.equal(label.textContent, 'Light');
+  assert.deepEqual(writes, [['theme', 'dark']]);
+});
+
+test('reveal initializer exposes everything when motion is reduced', () => {
+  const elements = [
+    { classList: { add(value) { this.value = value; } } },
+    { classList: { add(value) { this.value = value; } } },
+  ];
+  initializeReveals({ elements, reducedMotion: true });
+  assert.deepEqual(elements.map((element) => element.classList.value), ['is-visible', 'is-visible']);
 });

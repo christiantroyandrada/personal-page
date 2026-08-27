@@ -28,6 +28,48 @@ export function applyTheme(root, theme) {
   root.style.colorScheme = theme;
 }
 
+export function initializeTheme({ root, toggle, storage, media }) {
+  let storedTheme = safeReadTheme(storage);
+  let theme = getInitialTheme(storedTheme, media.matches);
+  const label = toggle?.querySelector('[data-theme-label]');
+
+  const update = (nextTheme) => {
+    theme = nextTheme;
+    applyTheme(root, theme);
+    if (!toggle) return;
+    const isDark = theme === 'dark';
+    toggle.setAttribute('aria-pressed', String(isDark));
+    toggle.setAttribute('aria-label', `Use ${isDark ? 'light' : 'dark'} theme`);
+    if (label) label.textContent = isDark ? 'Light' : 'Dark';
+  };
+
+  update(theme);
+  toggle?.addEventListener('click', () => {
+    storedTheme = theme === 'dark' ? 'light' : 'dark';
+    safeWriteTheme(storage, storedTheme);
+    update(storedTheme);
+  });
+  media.addEventListener?.('change', (event) => {
+    if (storedTheme) return;
+    update(event.matches ? 'dark' : 'light');
+  });
+}
+
+export function initializeReveals({ elements, reducedMotion, observerFactory }) {
+  if (reducedMotion || !observerFactory) {
+    elements.forEach((element) => element.classList.add('is-visible'));
+    return;
+  }
+  const observer = observerFactory((entries, instance) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      instance.unobserve(entry.target);
+    }
+  });
+  elements.forEach((element) => observer.observe(element));
+}
+
 export async function submitContactForm(form, fetchImpl = fetch) {
   const response = await fetchImpl(form.action, {
     method: 'POST',
@@ -59,7 +101,28 @@ export function enhanceContactForm(form, fetchImpl = fetch) {
   });
 }
 
-if (typeof document !== 'undefined') {
-  const contactForm = document.querySelector('[data-contact-form]');
+export function initializeSite({
+  doc = document,
+  root = doc.documentElement,
+  storage = (() => {
+    try { return globalThis.localStorage; } catch { return null; }
+  })(),
+  matchMediaImpl = globalThis.matchMedia,
+  observerFactory = globalThis.IntersectionObserver
+    ? (callback) => new globalThis.IntersectionObserver(callback, { rootMargin: '0px 0px -10%' })
+    : null,
+} = {}) {
+  const themeMedia = matchMediaImpl('(prefers-color-scheme: dark)');
+  initializeTheme({ root, toggle: doc.querySelector('[data-theme-toggle]'), storage, media: themeMedia });
+  initializeReveals({
+    elements: [...doc.querySelectorAll('.reveal')],
+    reducedMotion: matchMediaImpl('(prefers-reduced-motion: reduce)').matches,
+    observerFactory,
+  });
+  const contactForm = doc.querySelector('[data-contact-form]');
   if (contactForm) enhanceContactForm(contactForm);
+}
+
+if (typeof document !== 'undefined') {
+  initializeSite();
 }

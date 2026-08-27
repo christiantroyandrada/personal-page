@@ -2,6 +2,16 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
+    <script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let theme = null;
+        try { theme = localStorage.getItem('theme'); } catch {}
+        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Outside the Workbench | Christian Troy Andrada</title>
     <meta name="description" content="A short personal appendix about Christian Troy Andrada: astrophotography, music, gaming, coffee, and the outdoors.">
@@ -35,7 +45,7 @@
       </div>
     </header>
     <main id="main-content" class="workbench">
-      <section class="section-block reveal is-visible" aria-labelledby="hobbies-title">
+      <section class="section-block reveal" aria-labelledby="hobbies-title">
         <header class="section-heading"><span class="section-index">Personal appendix</span><div><h1 id="hobbies-title">What keeps me curious.</h1><p>Engineering is part of my life, not the whole thing. These are the interests that reset my attention and often send me back to work with a better question.</p></div></header>
         <div class="hobby-list">
           <article class="hobby-list__row"><div><p class="record-label">01</p><h2>Astrophotography</h2></div><p>Long exposures reward patient setup and repeatable process. I built <a href="https://github.com/christiantroyandrada/aporn-tool">AstroPipeline in the aporn-tool repository</a> because restarting multi-stage media work by hand was a problem worth removing.</p></article>

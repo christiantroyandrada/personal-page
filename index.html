@@ -2,6 +2,16 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
+    <script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let theme = null;
+        try { theme = localStorage.getItem('theme'); } catch {}
+        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Christian Troy Andrada | Full-Stack &amp; DevOps Engineer</title>
     <meta name="description" content="Software engineer building and operating production systems across full-stack web development, delivery, and cloud operations.">
@@ -53,7 +63,7 @@
       </div>
     </header>
     <main id="main-content" class="workbench">
-      <section class="hero reveal is-visible" aria-labelledby="hero-title">
+      <section class="hero reveal" aria-labelledby="hero-title">
         <div>
           <p class="eyebrow">Software engineer who builds and operates production systems</p>
           <h1 id="hero-title">I build software and help it survive production.</h1>
@@ -66,7 +76,7 @@
           <a class="button-link" href="#systems">Inspect the work</a>
         </aside>
       </section>
-      <section id="proof" class="section-block reveal is-visible" aria-labelledby="proof-title">
+      <section id="proof" class="section-block reveal" aria-labelledby="proof-title">
         <header class="section-heading"><span class="section-index">01 / Proof</span><div><h2 id="proof-title">Claims need receipts.</h2><p>Recent delivery evidence, bounded to the work and period that produced it.</p></div></header>
         <div class="evidence-ledger">
           <div class="evidence-ledger__row"><span class="evidence-ledger__value">46</span><p><strong>merged PRs</strong> during a five-month Orkestra contract, spanning application delivery, migration work, and release support.</p></div>
@@ -75,7 +85,7 @@
           <div class="evidence-ledger__row"><span class="evidence-ledger__value">95%</span><p><strong>test coverage</strong> established from zero on H5 microfrontends I owned at a Philippine fintech platform.</p></div>
         </div>
       </section>
-      <section id="systems" class="section-block reveal is-visible" aria-labelledby="systems-title">
+      <section id="systems" class="section-block reveal" aria-labelledby="systems-title">
         <header class="section-heading"><span class="section-index">02 / Systems</span><div><h2 id="systems-title">Public systems, not thumbnail theatre.</h2><p>Three repositories selected for the engineering decisions they expose.</p></div></header>
         <div class="system-list">
           <article class="system-record">
@@ -92,7 +102,7 @@
           </article>
         </div>
       </section>
-      <section id="experience" class="section-block reveal is-visible" aria-labelledby="experience-title">
+      <section id="experience" class="section-block reveal" aria-labelledby="experience-title">
         <header class="section-heading"><span class="section-index">03 / Experience</span><div><h2 id="experience-title">Delivery across product boundaries.</h2><p>Selected outcomes from frontend, full-stack, and operational work. Client-specific work remains confidential, described without sharing protected details.</p></div></header>
         <div class="experience-list">
           <article class="experience-list__row"><div><h3>Orkestra</h3><p>Software Engineer / Mar to Jul 2026</p></div><p>Delivered typed internal-tool migrations, reviewed teammate changes, and worked across releases, infrastructure, production diagnosis, and cloud operations during a five-month contract.</p></article>
@@ -101,7 +111,7 @@
           <article class="experience-list__row"><div><h3>Pylon International</h3><p>Web Developer / 2020 to 2022</p></div><p>Built full-stack Laravel applications, worked directly with product needs, and deployed services on Google Cloud.</p></article>
         </div>
       </section>
-      <section id="range" class="section-block reveal is-visible" aria-labelledby="range-title">
+      <section id="range" class="section-block reveal" aria-labelledby="range-title">
         <header class="section-heading"><span class="section-index">04 / Range</span><div><h2 id="range-title">Depth where it counts. Range where it helps.</h2><p>I do not present every tool as equal expertise. This is the working map.</p></div></header>
         <div class="capability-matrix">
           <div class="capability-matrix__row"><strong>Build</strong><p>Production depth in Vue, TypeScript, JavaScript, Laravel, PHP, component systems, and accessible web interfaces.</p></div>
@@ -110,10 +120,10 @@
           <div class="capability-matrix__row"><strong>Explore</strong><p>Active learning through Node backend work, React and Svelte frontend projects, and .NET exploration.</p></div>
         </div>
       </section>
-      <section class="section-block reveal is-visible" aria-labelledby="ai-title">
+      <section class="section-block reveal" aria-labelledby="ai-title">
         <header class="section-heading"><span class="section-index">05 / Practice</span><div><h2 id="ai-title">AI extends my range. It does not own the outcome.</h2><p>I use Codex and Claude Code to close knowledge gaps, inspect unfamiliar backend territory, accelerate tests and deployment work, and explore alternatives. Architecture, review, security decisions, and accountability remain human-owned.</p></div></header>
       </section>
-      <section id="contact-cta" class="section-block reveal is-visible" aria-labelledby="contact-title">
+      <section id="contact-cta" class="section-block reveal" aria-labelledby="contact-title">
         <header class="section-heading"><span class="section-index">06 / Contact</span><div><h2 id="contact-title">Have a product problem that crosses boundaries?</h2><p>I am open to full-stack software engineering and DevOps-leaning roles where practical delivery matters more than theatre.</p><a class="button-link" href="./contacts.html">Start a conversation</a></div></header>
       </section>
     </main>

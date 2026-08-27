@@ -2,6 +2,16 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
+    <script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let theme = null;
+        try { theme = localStorage.getItem('theme'); } catch {}
+        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Christian Troy Andrada | Software Engineer</title>
     <meta name="description" content="Contact Christian Troy Andrada about full-stack software engineering, frontend, and DevOps-leaning work.">
@@ -35,7 +45,7 @@
       </div>
     </header>
     <main id="main-content" class="workbench">
-      <section class="section-block reveal is-visible" aria-labelledby="contact-page-title">
+      <section class="section-block reveal" aria-labelledby="contact-page-title">
         <header class="section-heading"><span class="section-index">Contact / Direct</span><div><h1 id="contact-page-title">Let’s compare notes.</h1><p>If you are hiring for full-stack software engineering, frontend work with broader ownership, or a DevOps-leaning delivery role, send the context. I value direct problem statements over polished pitches.</p></div></header>
         <div class="contact-layout">
           <aside>
