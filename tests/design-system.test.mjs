@@ -20,10 +20,19 @@ test('defines light and dark OKLCH material tokens', () => {
 test('does not use banned generated-design patterns', () => {
   assert.doesNotMatch(css, /background-clip:\s*text|-webkit-background-clip:\s*text/);
   assert.doesNotMatch(css, /border-(left|right):\s*[2-9]/);
+  assert.doesNotMatch(css, /backdrop-filter/);
 });
 
 test('reduced motion disables entrances and smooth scrolling', () => {
   assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
   assert.match(css, /scroll-behavior:\s*auto/);
   assert.match(css, /animation-duration:\s*0\.01ms/);
+  assert.match(css, /animation-delay:\s*0\.01ms/);
+  assert.match(css, /@keyframes\s+reveal-failsafe/);
+});
+
+test('font and navigation defaults protect layout stability and touch use', () => {
+  assert.doesNotMatch(css, /font-display:\s*swap/);
+  assert.match(css, /\.site-nav a\s*{[\s\S]*?min-height:\s*2\.75rem/);
+  assert.match(css, /\.theme-toggle\s*{[\s\S]*?min-height:\s*2\.75rem/);
 });

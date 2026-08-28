@@ -3,7 +3,7 @@
   src: url('../fonts/BarlowSemiCondensed-latin.woff2') format('woff2');
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   src: url('../fonts/AtkinsonHyperlegibleNext-latin.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   src: url('../fonts/AtkinsonHyperlegibleNext-italic-latin.woff2') format('woff2');
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
 }
 
 :root {
@@ -121,8 +121,7 @@ body.workbench-page {
   inset-block-start: 0;
   z-index: 20;
   border-bottom: 1px solid var(--color-rule);
-  background: color-mix(in oklch, var(--color-canvas) 92%, transparent);
-  backdrop-filter: blur(10px);
+  background: var(--color-canvas);
 }
 
 .site-header__inner,
@@ -172,6 +171,9 @@ body.workbench-page {
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   font-size: 0.92rem;
   text-decoration: none;
 }
@@ -195,6 +197,7 @@ body.workbench-page {
 
 .theme-toggle {
   min-width: 4.25rem;
+  min-height: 2.75rem;
   padding: 0.45rem 0.65rem;
   font-size: 0.82rem;
 }
@@ -439,12 +442,20 @@ body.workbench-page {
 .js .reveal {
   opacity: 0;
   transform: translateY(0.75rem);
+  animation: reveal-failsafe 1ms 700ms forwards;
 }
 
 .js .reveal.is-visible {
   opacity: 1;
   transform: none;
   transition: opacity 480ms var(--ease-out), transform 480ms var(--ease-out);
+}
+
+@keyframes reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 48rem) {
@@ -531,6 +542,7 @@ body.workbench-page {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
