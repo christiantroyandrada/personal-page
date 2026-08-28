@@ -329,6 +329,15 @@ body.workbench-page {
   border-bottom: 1px solid var(--color-rule);
 }
 
+.evidence-ledger__row {
+  align-content: start;
+  gap: var(--space-xl);
+}
+
+.evidence-ledger__row p {
+  margin: 0;
+}
+
 .evidence-ledger__value {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: clamp(2.25rem, 5vw, 4rem);

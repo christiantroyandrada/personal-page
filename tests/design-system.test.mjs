@@ -40,3 +40,8 @@ test('font and navigation defaults protect layout stability and touch use', () =
 test('mobile deep links clear the wrapped sticky header', () => {
   assert.match(css, /@media\s*\(max-width:\s*48rem\)\s*{[\s\S]*?html\s*{[\s\S]*?scroll-padding-top:\s*12rem/);
 });
+
+test('desktop evidence values stay visually grouped with aligned copy', () => {
+  assert.match(css, /\.evidence-ledger__row\s*{[\s\S]*?align-content:\s*start;[\s\S]*?gap:\s*var\(--space-xl\);/);
+  assert.match(css, /\.evidence-ledger__row p\s*{[\s\S]*?margin:\s*0;/);
+});
