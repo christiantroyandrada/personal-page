@@ -36,3 +36,7 @@ test('font and navigation defaults protect layout stability and touch use', () =
   assert.match(css, /\.site-nav a\s*{[\s\S]*?min-height:\s*2\.75rem/);
   assert.match(css, /\.theme-toggle\s*{[\s\S]*?min-height:\s*2\.75rem/);
 });
+
+test('mobile deep links clear the wrapped sticky header', () => {
+  assert.match(css, /@media\s*\(max-width:\s*48rem\)\s*{[\s\S]*?html\s*{[\s\S]*?scroll-padding-top:\s*12rem/);
+});
