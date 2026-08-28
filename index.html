@@ -69,12 +69,12 @@
         <div>
           <p class="eyebrow">Software engineer who builds and operates production systems</p>
           <h1 id="hero-title">I build software and help it survive production.</h1>
-          <p class="hero__lede">Six years delivering web products, from Vue and Laravel application work to release pipelines, cloud infrastructure, observability, and the operational details that keep teams moving.</p>
+          <p class="hero__lede">Six years delivering web products, from <span class="tech-inline" data-tech="vue">Vue</span> and <span class="tech-inline" data-tech="laravel">Laravel</span> application work to release pipelines, cloud infrastructure, observability, and the operational details that keep teams moving.</p>
         </div>
         <aside class="hero__aside" aria-label="Working style">
           <p><strong>Pragmatic.</strong> Solve the problem in front of us and leave the code easier to change.</p>
           <p><strong>Resourceful.</strong> Use documentation, AI, and sound web fundamentals to close gaps without hiding uncertainty.</p>
-          <p><strong>Adaptive.</strong> Deepest in Vue and Laravel, expanding through Node, React, Svelte, and .NET where the work calls for it.</p>
+          <p><strong>Adaptive.</strong> Deepest in <span class="tech-inline" data-tech="vue">Vue</span> and <span class="tech-inline" data-tech="laravel">Laravel</span>, expanding through <span class="tech-inline" data-tech="node">Node</span>, <span class="tech-inline" data-tech="react">React</span>, <span class="tech-inline" data-tech="svelte">Svelte</span>, and <span class="tech-inline" data-tech="dotnet">.NET</span> where the work calls for it.</p>
           <a class="button-link" href="#systems">Inspect the work</a>
         </aside>
       </section>
@@ -92,15 +92,27 @@
         <div class="system-list">
           <article class="system-record">
             <div><p class="record-label">Build + operate</p><h3>Secure Chat</h3><a href="https://github.com/christiantroyandrada/chat-microservices">View chat-microservices on GitHub</a></div>
-            <div><p>A containerised chat system using Node, TypeScript, PostgreSQL, RabbitMQ, Socket.IO, nginx, CI, metrics, dashboards, and operational runbooks.</p><ul class="tag-list" aria-label="Secure Chat technologies"><li class="tag">Node</li><li class="tag">PostgreSQL</li><li class="tag">RabbitMQ</li><li class="tag">Docker</li><li class="tag">Prometheus</li></ul><details><summary>Engineering evidence</summary><p>Automated tests and security audits pass on the current main branch. The repository documents local orchestration, deployment checks, monitoring, and incident-oriented operating steps.</p></details></div>
+            <div><p>A containerised chat system using Node, TypeScript, PostgreSQL, RabbitMQ, Socket.IO, nginx, CI, metrics, dashboards, and operational runbooks.</p><ul class="tag-list" aria-label="Secure Chat technologies"><li class="tag" data-tech="node">Node</li><li class="tag" data-tech="typescript">TypeScript</li><li class="tag" data-tech="postgresql">PostgreSQL</li><li class="tag" data-tech="rabbitmq">RabbitMQ</li><li class="tag" data-tech="docker">Docker</li><li class="tag" data-tech="prometheus">Prometheus</li></ul><details><summary>Engineering evidence</summary><p>Automated tests and security audits pass on the current main branch. The repository documents local orchestration, deployment checks, monitoring, and incident-oriented operating steps.</p></details></div>
+            <figure class="project-visual">
+              <img src="./img/projects/secure-chat.webp" alt="Docker Desktop showing the running Secure Chat services" loading="lazy" decoding="async" width="1600" height="981">
+              <figcaption><span>Runtime evidence / 01</span>Container topology running locally in Docker Desktop.</figcaption>
+            </figure>
           </article>
           <article class="system-record">
             <div><p class="record-label">Correctness + learning</p><h3>Pitaka</h3><a href="https://github.com/christiantroyandrada/pitaka-app">View pitaka-app on GitHub</a></div>
-            <div><p>A mock wallet with no real money. It is an active React Native learning project built around integer centavos, an append-only ledger, fail-closed feature flags, ADRs, strict TypeScript, and CI.</p><ul class="tag-list" aria-label="Pitaka technologies"><li class="tag">React Native</li><li class="tag">TypeScript</li><li class="tag">ADRs</li><li class="tag">CI</li></ul><details><summary>Engineering evidence</summary><p>The repository currently carries 215 tests across 20 suites. Device transport gaps are documented instead of presented as completed production capability.</p></details></div>
+            <div><p>A mock wallet with no real money. It is an active React Native learning project built around integer centavos, an append-only ledger, fail-closed feature flags, ADRs, strict TypeScript, and CI.</p><ul class="tag-list" aria-label="Pitaka technologies"><li class="tag" data-tech="react">React Native</li><li class="tag" data-tech="typescript">TypeScript</li><li class="tag">ADRs</li><li class="tag">CI</li></ul><details><summary>Engineering evidence</summary><p>The repository currently carries 215 tests across 20 suites. Device transport gaps are documented instead of presented as completed production capability.</p></details></div>
+            <figure class="project-visual" data-visual="app">
+              <img src="./img/projects/pitaka-wallet.webp" alt="Pitaka mock wallet home showing the available balance and service shortcuts" loading="lazy" decoding="async" width="390" height="360">
+              <figcaption><span>Interface evidence / 02</span>Authenticated mock-wallet home running from the public repository.</figcaption>
+            </figure>
           </article>
           <article class="system-record">
             <div><p class="record-label">Tooling + release</p><h3>AstroPipeline</h3><a href="https://github.com/christiantroyandrada/aporn-tool">View the aporn-tool repository on GitHub</a></div>
-            <div><p>A cross-platform Python CLI that turns a multi-stage media workflow into resumable, testable steps with packaging and release automation.</p><ul class="tag-list" aria-label="AstroPipeline technologies"><li class="tag">Python</li><li class="tag">CLI</li><li class="tag">PyPI</li><li class="tag">Release automation</li></ul><details><summary>Engineering evidence</summary><p>Stages can resume after interruption, tests protect the workflow, and releases are prepared as installable packages rather than machine-specific scripts.</p></details></div>
+            <div><p>A cross-platform Python CLI that turns a multi-stage media workflow into resumable, testable steps with packaging and release automation.</p><ul class="tag-list" aria-label="AstroPipeline technologies"><li class="tag" data-tech="python">Python</li><li class="tag">CLI</li><li class="tag">PyPI</li><li class="tag">Release automation</li></ul><details><summary>Engineering evidence</summary><p>Stages can resume after interruption, tests protect the workflow, and releases are prepared as installable packages rather than machine-specific scripts.</p></details></div>
+            <figure class="project-visual">
+              <img src="./img/projects/astropipeline-cli.webp" alt="AstroPipeline terminal showing its version and available commands" loading="lazy" decoding="async" width="1200" height="800">
+              <figcaption><span>CLI evidence / 03</span>Published version identity and the generated command map.</figcaption>
+            </figure>
           </article>
         </div>
       </section>
@@ -116,10 +128,10 @@
       <section id="range" class="section-block reveal" aria-labelledby="range-title">
         <header class="section-heading"><span class="section-index">04 / Range</span><div><h2 id="range-title">Depth where it counts. Range where it helps.</h2><p>I do not present every tool as equal expertise. This is the working map.</p></div></header>
         <div class="capability-matrix">
-          <div class="capability-matrix__row"><strong>Build</strong><p>Production depth in Vue, TypeScript, JavaScript, Laravel, PHP, component systems, and accessible web interfaces.</p></div>
-          <div class="capability-matrix__row"><strong>Operate</strong><p>Hands-on range with Docker, nginx, Google Cloud, CI/CD, Linux, release workflows, monitoring, and incident diagnosis.</p></div>
+          <div class="capability-matrix__row"><strong>Build</strong><p>Production depth in <span class="tech-inline" data-tech="vue">Vue</span>, <span class="tech-inline" data-tech="typescript">TypeScript</span>, <span class="tech-inline" data-tech="javascript">JavaScript</span>, <span class="tech-inline" data-tech="laravel">Laravel</span>, <span class="tech-inline" data-tech="php">PHP</span>, component systems, and accessible web interfaces.</p></div>
+          <div class="capability-matrix__row"><strong>Operate</strong><p>Hands-on range with <span class="tech-inline" data-tech="docker">Docker</span>, nginx, <span class="tech-inline" data-tech="gcp">Google Cloud</span>, CI/CD, Linux, release workflows, monitoring, and incident diagnosis.</p></div>
           <div class="capability-matrix__row"><strong>Quality</strong><p>Testing strategy, code review, migrations, security-minded defaults, documentation, and maintainable delivery rails.</p></div>
-          <div class="capability-matrix__row"><strong>Explore</strong><p>Active learning through Node backend work, React and Svelte frontend projects, and .NET exploration.</p></div>
+          <div class="capability-matrix__row"><strong>Explore</strong><p>Active learning through <span class="tech-inline" data-tech="node">Node</span> backend work, <span class="tech-inline" data-tech="react">React</span> and <span class="tech-inline" data-tech="svelte">Svelte</span> frontend projects, and <span class="tech-inline" data-tech="dotnet">.NET</span> exploration.</p></div>
         </div>
       </section>
       <section class="section-block reveal" aria-labelledby="ai-title">
